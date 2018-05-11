@@ -5,5 +5,6 @@
         android:id="@+id/createButton"
         android:title="Add Note"
         app:showAsAction="always"
+        android:onClick="addNote"
         ></item>
 </menu>
