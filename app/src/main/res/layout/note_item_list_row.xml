@@ -9,16 +9,15 @@
         android:id="@+id/note_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Title"
         android:textSize="30sp"
         android:textStyle="bold"
         android:textColor="#555"
         />
 
     <TextView
+        android:id="@+id/note_description"
         android:singleLine="true"
         android:textSize="15sp"
-        android:text="description fulll text this is the full lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem lorem ipsem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

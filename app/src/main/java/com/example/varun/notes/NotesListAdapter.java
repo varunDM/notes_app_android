@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.zip.Inflater;
 
 /**
@@ -20,10 +21,10 @@ public class NotesListAdapter extends ArrayAdapter<Note> {
 
     private LayoutInflater mLayoutInflater;
     private Context mContext;
-    private ArrayList<Note> mNotes;
+    private List<Note> mNotes;
     private int mViewResourceId;
 
-    public NotesListAdapter(Context context, int viewResourceId, ArrayList<Note> notes) {
+    public NotesListAdapter(Context context, int viewResourceId, List<Note> notes) {
         super(context,viewResourceId);
 
         mContext = context;
@@ -43,6 +44,9 @@ public class NotesListAdapter extends ArrayAdapter<Note> {
 
         TextView title = (TextView) convertView.findViewById(R.id.note_title);
         title.setText(mNotes.get(position).mTitle);
+
+        TextView description = (TextView) convertView.findViewById(R.id.note_description);
+        description.setText(mNotes.get(position).mContent);
 
         return convertView;
     }

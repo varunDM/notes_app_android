@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+
     tools:context="com.example.varun.notes.NewNoteActivity">
 
     <android.support.v7.widget.Toolbar
@@ -12,16 +14,29 @@
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
         android:elevation="4dp"
+        app:navigationIcon="?attr/homeAsUpIndicator"
         android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Note"
+    <EditText
+        android:id="@+id/note_title_text"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:hint="title"
+        android:padding="10dp"
         android:textSize="20sp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        />
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:layout_height="50dp" />
 
-</RelativeLayout>
+    <EditText
+        android:id="@+id/note_content_text"
+        android:layout_marginTop="10dp"
+        android:hint="content"
+        android:padding="10dp"
+        android:gravity="top"
+        android:textColor="#222"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
